@@ -2211,6 +2211,12 @@ au BufNewFile,BufRead */etc/systemd/system/*.d/.#*	setf systemd
 au BufNewFile,BufRead */etc/systemd/system/.#*		setf systemd
 au BufNewFile,BufRead */.config/systemd/user/*.d/.#*	setf systemd
 au BufNewFile,BufRead */.config/systemd/user/.#*	setf systemd
+" Podman unit files
+au BufNewFile,BufRead */containers/systemd/*.{container,volume,network,kube,image,pod}	setf systemd
+" Podman overrides
+au BufNewFile,BufRead */etc/containers/systemd/*.d/*.conf		setf systemd
+au BufNewFile,BufRead */usr/share/containers/systemd/*.d/*.conf		setf systemd
+au BufNewFile,BufRead */.config/containers/systemd/*.d/*.conf		setf systemd
 
 " Synopsys Design Constraints
 au BufNewFile,BufRead *.sdc			setf sdc
